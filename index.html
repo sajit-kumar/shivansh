@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shivansh Rudraksha Bhandar | Kathmandu, Nepal</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Serif+Devanagari:wght@400;600;700&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --maroon: #5C0A14;
+    --deep-maroon: #3A0008;
+    --saffron: #D4631A;
+    --gold: #C9A84C;
+    --light-gold: #E8C97A;
+    --cream: #FDF6EC;
+    --light-cream: #FFF9F0;
+    --brown: #2C1A0E;
+    --text-dark: #1A0A00;
+    --shadow-gold: rgba(201,168,76,0.4);
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background: var(--light-cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* ── MANDALA BG ── */
+  body::before {
+    content:'';
+    position:fixed; top:0;left:0;width:100%;height:100%;
+    background:
+      radial-gradient(ellipse at 20% 50%, rgba(92,10,20,0.04) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(212,99,26,0.04) 0%, transparent 60%);
+    pointer-events:none; z-index:0;
+  }
+
+  /* ── NAVBAR ── */
+  nav {
+    position: fixed; top:0; width:100%; z-index:1000;
+    background: linear-gradient(135deg, var(--deep-maroon) 0%, var(--maroon) 100%);
+    border-bottom: 2px solid var(--gold);
+    padding: 0 2rem;
+    display:flex; align-items:center; justify-content:space-between;
+    height: 64px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+  }
+  .nav-logo {
+    font-family:'Cinzel', serif;
+    color: var(--light-gold);
+    font-size:1.1rem; font-weight:700;
+    letter-spacing:1px;
+  }
+  .nav-links {
+    display:flex; gap:1.5rem; list-style:none;
+  }
+  .nav-links a {
+    color: var(--cream); text-decoration:none;
+    font-size:0.82rem; letter-spacing:1px;
+    font-family:'Cinzel', serif;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--light-gold); }
+  .hamburger { display:none; flex-direction:column; gap:5px; cursor:pointer; }
+  .hamburger span { width:25px;height:2px;background:var(--light-gold);display:block; }
+
+  /* ── HERO ── */
+  #home {
+    min-height: 100vh;
+    background: linear-gradient(160deg, var(--deep-maroon) 0%, #6B0F1A 40%, #8B2500 70%, #3A0008 100%);
+    display:flex; align-items:center; justify-content:center;
+    flex-direction:column; text-align:center;
+    padding: 100px 2rem 4rem;
+    position:relative; overflow:hidden;
+  }
+
+  /* mandala SVG overlay */
+  #home::before {
+    content:'';
+    position:absolute; top:50%; left:50%;
+    transform:translate(-50%,-50%);
+    width:700px; height:700px;
+    background: radial-gradient(circle, rgba(201,168,76,0.08) 0%, transparent 70%);
+    border-radius:50%;
+    animation: pulse 6s ease-in-out infinite;
+  }
+  #home::after {
+    content:'';
+    position:absolute; inset:0;
+    background-image:
+      repeating-conic-gradient(from 0deg at 50% 50%, rgba(201,168,76,0.03) 0deg 10deg, transparent 10deg 20deg);
+    pointer-events:none;
+  }
+
+  @keyframes pulse {
+    0%,100%{ transform:translate(-50%,-50%) scale(1); opacity:0.6; }
+    50%{ transform:translate(-50%,-50%) scale(1.15); opacity:1; }
+  }
+
+  .hero-om {
+    font-size:4rem; color:var(--light-gold);
+    opacity:0.9; margin-bottom:0.5rem;
+    animation: fadeDown 1s ease both;
+    position:relative; z-index:1;
+    text-shadow: 0 0 30px var(--shadow-gold);
+  }
+  .hero-title {
+    font-family:'Cinzel', serif;
+    font-size:clamp(1.8rem, 5vw, 3.8rem);
+    color: var(--light-gold);
+    line-height:1.2; margin-bottom:0.3rem;
+    animation: fadeDown 1.2s ease both;
+    position:relative; z-index:1;
+    text-shadow: 0 0 40px rgba(201,168,76,0.5), 2px 2px 0 rgba(0,0,0,0.5);
+  }
+  .hero-hindi {
+    font-family:'Noto Serif Devanagari', serif;
+    font-size:clamp(1rem, 3vw, 1.6rem);
+    color: var(--cream); opacity:0.85;
+    margin-bottom:1rem;
+    animation: fadeDown 1.4s ease both;
+    position:relative; z-index:1;
+  }
+  .hero-tagline {
+    font-family:'Cormorant Garamond', serif;
+    font-size:clamp(1rem, 2.5vw, 1.4rem);
+    color: var(--saffron);
+    letter-spacing:4px; font-style:italic;
+    margin-bottom:2rem;
+    animation: fadeDown 1.6s ease both;
+    position:relative; z-index:1;
+  }
+
+  .hero-badges {
+    display:flex; flex-wrap:wrap; gap:1rem; justify-content:center;
+    margin-bottom:2.5rem;
+    animation: fadeUp 1.8s ease both;
+    position:relative; z-index:1;
+  }
+  .badge {
+    background: linear-gradient(135deg, rgba(201,168,76,0.2), rgba(201,168,76,0.05));
+    border: 1px solid var(--gold);
+    color: var(--light-gold);
+    padding:0.5rem 1.2rem; border-radius:50px;
+    font-size:0.82rem; letter-spacing:1px;
+    font-family:'Cinzel', serif;
+    backdrop-filter:blur(5px);
+  }
+  .badge.igl {
+    background: linear-gradient(135deg, rgba(201,168,76,0.35), rgba(212,99,26,0.2));
+    border-color: var(--light-gold);
+    font-weight:700;
+    box-shadow: 0 0 15px var(--shadow-gold);
+  }
+
+  .hero-owner {
+    color: var(--cream); opacity:0.8;
+    font-size:0.95rem; letter-spacing:2px;
+    margin-bottom:2rem;
+    font-family:'Cinzel',serif;
+    position:relative; z-index:1;
+  }
+
+  .contact-btns {
+    display:flex; flex-wrap:wrap; gap:1rem; justify-content:center;
+    animation: fadeUp 2s ease both;
+    position:relative; z-index:1;
+  }
+  .btn {
+    padding:0.8rem 2rem; border-radius:4px;
+    text-decoration:none; font-family:'Cinzel',serif;
+    font-size:0.85rem; letter-spacing:1px;
+    transition: all 0.3s; cursor:pointer; border:none;
+    display:inline-flex; align-items:center; gap:0.5rem;
+  }
+  .btn-wa {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color:#fff;
+    box-shadow: 0 4px 15px rgba(37,211,102,0.4);
+  }
+  .btn-wa:hover { transform:translateY(-2px); box-shadow:0 6px 20px rgba(37,211,102,0.5); }
+  .btn-call {
+    background: linear-gradient(135deg, var(--gold), var(--saffron));
+    color: var(--deep-maroon);
+    box-shadow: 0 4px 15px var(--shadow-gold);
+  }
+  .btn-call:hover { transform:translateY(-2px); }
+
+  /* ── SECTIONS ── */
+  section { position:relative; z-index:1; }
+
+  .section-divider {
+    width:100%; height:60px;
+    background: linear-gradient(180deg, transparent, var(--maroon));
+    position:relative;
+  }
+  .section-divider.rev { background: linear-gradient(180deg, var(--maroon), transparent); }
+
+  .section-dark {
+    background: linear-gradient(160deg, var(--deep-maroon), var(--maroon) 50%, #4A0010);
+    padding:5rem 2rem;
+  }
+  .section-light {
+    background: var(--light-cream);
+    padding:5rem 2rem;
+  }
+  .section-saffron {
+    background: linear-gradient(160deg, #1A0500, #2C0D00, #1A0500);
+    padding:5rem 2rem;
+  }
+
+  .section-header {
+    text-align:center; margin-bottom:3rem;
+  }
+  .section-header .om { font-size:1.8rem; color:var(--light-gold); display:block; margin-bottom:0.3rem; }
+  .section-header h2 {
+    font-family:'Cinzel', serif;
+    font-size:clamp(1.5rem, 4vw, 2.5rem);
+    margin-bottom:0.5rem;
+  }
+  .section-dark .section-header h2 { color:var(--light-gold); }
+  .section-light .section-header h2 { color:var(--maroon); }
+  .section-saffron .section-header h2 { color:var(--light-gold); }
+
+  .section-header .hindi-sub {
+    font-family:'Noto Serif Devanagari', serif;
+    font-size:1rem; opacity:0.75;
+  }
+  .section-dark .hindi-sub { color:var(--cream); }
+  .section-light .hindi-sub { color:var(--brown); }
+  .section-saffron .hindi-sub { color:var(--cream); }
+
+  .gold-line {
+    width:80px; height:2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin:0.8rem auto;
+  }
+
+  /* ── MUKHI CARDS GRID ── */
+  .mukhi-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap:1.5rem;
+    max-width:1200px; margin:0 auto;
+  }
+
+  .mukhi-card {
+    background: linear-gradient(160deg, rgba(255,255,255,0.06), rgba(201,168,76,0.04));
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius:12px; overflow:hidden;
+    transition: all 0.4s;
+    position:relative;
+  }
+  .mukhi-card:hover {
+    transform:translateY(-6px);
+    border-color:var(--gold);
+    box-shadow: 0 12px 40px rgba(201,168,76,0.2), 0 0 0 1px rgba(201,168,76,0.1);
+  }
+  .mukhi-card::before {
+    content:'';
+    position:absolute; top:0; left:0; right:0; height:2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity:0; transition:opacity 0.4s;
+  }
+  .mukhi-card:hover::before { opacity:1; }
+
+  .card-img-wrap {
+    width:100%; height:200px;
+    background: linear-gradient(160deg, rgba(92,10,20,0.6), rgba(58,0,8,0.8));
+    display:flex; align-items:center; justify-content:center;
+    position:relative; overflow:hidden;
+  }
+  .card-img-wrap img {
+    width:100%; height:100%; object-fit:cover; opacity:0.9;
+  }
+  .card-img-placeholder {
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    width:100%; height:100%;
+    gap:0.5rem;
+  }
+  .card-img-placeholder .ru-icon { font-size:3.5rem; opacity:0.5; }
+  .card-img-placeholder .upload-label {
+    font-size:0.7rem; color:rgba(201,168,76,0.6);
+    font-family:'Cinzel',serif; letter-spacing:1px;
+    text-align:center; padding:0 1rem;
+  }
+
+  /* image upload overlay */
+  .card-img-wrap input[type=file] {
+    position:absolute; inset:0; opacity:0; cursor:pointer; z-index:5;
+  }
+  .card-img-wrap:hover .upload-label { color:var(--light-gold); }
+
+  .card-body { padding:1.2rem 1.3rem; }
+  .card-number {
+    font-size:0.7rem; letter-spacing:2px;
+    color:var(--saffron); font-family:'Cinzel',serif;
+    margin-bottom:0.2rem;
+  }
+  .card-title {
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.3rem; font-weight:700; color:var(--light-gold);
+    margin-bottom:0.6rem;
+  }
+  .card-deity {
+    font-size:0.82rem; color:var(--cream); opacity:0.7;
+    margin-bottom:0.2rem;
+    font-family:'Cinzel',serif; letter-spacing:0.5px;
+  }
+  .card-wearer {
+    font-family:'Noto Serif Devanagari',serif;
+    font-size:0.82rem; color:var(--saffron);
+    margin-bottom:0.7rem;
+    line-height:1.5;
+  }
+  .card-benefits {
+    list-style:none; padding:0;
+  }
+  .card-benefits li {
+    font-family:'Noto Serif Devanagari',serif;
+    font-size:0.82rem; color:var(--cream); opacity:0.8;
+    padding:0.2rem 0 0.2rem 1rem;
+    position:relative; line-height:1.5;
+  }
+  .card-benefits li::before {
+    content:'✦'; position:absolute; left:0;
+    color:var(--gold); font-size:0.6rem; top:0.35rem;
+  }
+
+  /* ── GAURI SHANKAR SPECIAL ── */
+  .gs-section {
+    max-width:900px; margin:0 auto;
+  }
+  .gs-card {
+    background: linear-gradient(135deg, rgba(201,168,76,0.1), rgba(212,99,26,0.05));
+    border:2px solid var(--gold);
+    border-radius:16px; overflow:hidden;
+    display:grid; grid-template-columns:1fr 1fr;
+    gap:0; box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(201,168,76,0.1);
+  }
+  .gs-img-col {
+    min-height:400px;
+    background: linear-gradient(160deg, rgba(58,0,8,0.9), rgba(92,10,20,0.7));
+    display:flex; align-items:center; justify-content:center;
+    position:relative; overflow:hidden;
+  }
+  .gs-img-col img { width:100%; height:100%; object-fit:cover; }
+  .gs-img-placeholder {
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:1rem; padding:2rem;
+  }
+  .gs-img-placeholder .ru-big { font-size:6rem; opacity:0.3; }
+  .gs-img-placeholder .upload-label {
+    color:rgba(201,168,76,0.6); font-family:'Cinzel',serif;
+    font-size:0.75rem; letter-spacing:1px; text-align:center;
+  }
+  .gs-img-col input[type=file] {
+    position:absolute; inset:0; opacity:0; cursor:pointer; z-index:5;
+  }
+  .gs-badge {
+    position:absolute; top:1rem; right:1rem;
+    background: linear-gradient(135deg, var(--gold), var(--saffron));
+    color:var(--deep-maroon); padding:0.3rem 0.8rem;
+    border-radius:50px; font-size:0.7rem;
+    font-family:'Cinzel',serif; font-weight:700;
+    z-index:2;
+  }
+
+  .gs-info { padding:2.5rem; display:flex; flex-direction:column; justify-content:center; }
+  .gs-info h3 {
+    font-family:'Cinzel',serif;
+    font-size:1.6rem; color:var(--light-gold);
+    margin-bottom:0.4rem;
+  }
+  .gs-info .gs-hindi {
+    font-family:'Noto Serif Devanagari',serif;
+    font-size:0.9rem; color:var(--saffron);
+    margin-bottom:1.2rem; line-height:1.6;
+  }
+  .gs-info .gs-desc {
+    font-family:'Cormorant Garamond',serif;
+    font-size:1rem; color:var(--cream); opacity:0.85;
+    line-height:1.7; margin-bottom:1.2rem; font-style:italic;
+  }
+  .gs-benefits { list-style:none; }
+  .gs-benefits li {
+    font-family:'Noto Serif Devanagari',serif;
+    font-size:0.85rem; color:var(--cream); opacity:0.8;
+    padding:0.3rem 0 0.3rem 1.2rem; position:relative; line-height:1.5;
+  }
+  .gs-benefits li::before {
+    content:'❈'; position:absolute; left:0;
+    color:var(--gold); font-size:0.75rem;
+  }
+
+  /* ── RASHI TABLE ── */
+  .rashi-grid {
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap:1.2rem; max-width:1200px; margin:0 auto;
+  }
+  .rashi-card {
+    background: linear-gradient(160deg, rgba(201,168,76,0.08), rgba(212,99,26,0.04));
+    border:1px solid rgba(201,168,76,0.2);
+    border-radius:10px; padding:1.3rem;
+    transition: all 0.3s;
+  }
+  .rashi-card:hover {
+    border-color:var(--gold);
+    transform:translateY(-3px);
+    box-shadow:0 8px 25px rgba(201,168,76,0.15);
+  }
+  .rashi-header {
+    display:flex; align-items:center; gap:0.8rem;
+    margin-bottom:0.8rem;
+  }
+  .rashi-symbol {
+    font-size:2rem; line-height:1;
+    filter: drop-shadow(0 0 6px var(--shadow-gold));
+  }
+  .rashi-name {
+    font-family:'Cinzel',serif; color:var(--light-gold);
+    font-size:1rem;
+  }
+  .rashi-eng { font-size:0.72rem; color:var(--saffron); letter-spacing:1px; }
+  .rashi-mukhi {
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.1rem; color:var(--cream); font-weight:600;
+    margin-bottom:0.3rem;
+  }
+  .rashi-planet {
+    font-size:0.75rem; color:var(--saffron); letter-spacing:1px;
+    font-family:'Cinzel',serif; margin-bottom:0.6rem;
+  }
+  .rashi-fayde {
+    font-family:'Noto Serif Devanagari',serif;
+    font-size:0.78rem; color:var(--cream); opacity:0.75;
+    line-height:1.7;
+  }
+
+  /* ── IGL SECTION ── */
+  .igl-wrap {
+    max-width:900px; margin:0 auto;
+    display:grid; grid-template-columns:1fr 1fr; gap:2rem;
+    align-items:start;
+  }
+  .igl-card {
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(201,168,76,0.3);
+    border-radius:12px; padding:2rem;
+  }
+  .igl-card h3 {
+    font-family:'Cinzel',serif; color:var(--light-gold);
+    font-size:1.1rem; margin-bottom:1rem; border-bottom:1px solid rgba(201,168,76,0.2);
+    padding-bottom:0.6rem;
+  }
+  .price-row {
+    display:flex; justify-content:space-between; align-items:center;
+    padding:0.4rem 0;
+    border-bottom:1px solid rgba(255,255,255,0.05);
+    font-size:0.82rem;
+  }
+  .price-row .face { color:var(--cream); opacity:0.8; }
+  .price-row .price { color:var(--light-gold); font-weight:700; font-family:'Cinzel',serif; font-size:0.78rem; }
+  .igl-note {
+    margin-top:0.8rem; padding:0.6rem;
+    background:rgba(212,99,26,0.1); border-radius:6px;
+    font-size:0.75rem; color:var(--saffron);
+    line-height:1.5;
+  }
+
+  /* ── SOCIAL / CONTACT ── */
+  .contact-section {
+    text-align:center; max-width:700px; margin:0 auto;
+  }
+  .social-links {
+    display:flex; gap:1.5rem; justify-content:center;
+    margin:2rem 0; flex-wrap:wrap;
+  }
+  .social-btn {
+    display:inline-flex; align-items:center; gap:0.6rem;
+    padding:0.8rem 1.6rem; border-radius:8px;
+    text-decoration:none; font-family:'Cinzel',serif;
+    font-size:0.82rem; letter-spacing:1px;
+    transition:all 0.3s;
+  }
+  .social-btn.fb { background:linear-gradient(135deg,#1877F2,#0C5CB5); color:#fff; }
+  .social-btn.ig { background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888); color:#fff; }
+  .social-btn.wa { background:linear-gradient(135deg,#25D366,#128C7E); color:#fff; }
+  .social-btn:hover { transform:translateY(-3px); filter:brightness(1.1); }
+  .contact-info {
+    font-family:'Cormorant Garamond',serif;
+    font-size:1.1rem; color:var(--cream); line-height:2;
+    font-style:italic;
+  }
+  .contact-info strong { color:var(--light-gold); font-style:normal; font-family:'Cinzel',serif; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--deep-maroon);
+    border-top:2px solid rgba(201,168,76,0.3);
+    padding:2.5rem 2rem 1.5rem;
+    text-align:center;
+  }
+  .footer-logo {
+    font-family:'Cinzel',serif; color:var(--light-gold);
+    font-size:1.4rem; margin-bottom:0.3rem;
+  }
+  .footer-sub {
+    font-family:'Noto Serif Devanagari',serif;
+    color:var(--saffron); font-size:0.85rem; margin-bottom:1.2rem;
+  }
+  .footer-links {
+    display:flex; gap:1.5rem; justify-content:center; flex-wrap:wrap;
+    margin-bottom:1.2rem;
+  }
+  .footer-links a {
+    color:var(--cream); opacity:0.6; text-decoration:none;
+    font-size:0.8rem; font-family:'Cinzel',serif; letter-spacing:1px;
+    transition:opacity 0.3s;
+  }
+  .footer-links a:hover { opacity:1; }
+  .footer-copy {
+    color:var(--cream); opacity:0.4; font-size:0.75rem;
+    font-family:'Lato',sans-serif; letter-spacing:1px;
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeDown {
+    from { opacity:0; transform:translateY(-20px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+  @keyframes fadeUp {
+    from { opacity:0; transform:translateY(20px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+
+  /* ── SCROLL REVEAL ── */
+  .reveal { opacity:0; transform:translateY(30px); transition: all 0.7s ease; }
+  .reveal.visible { opacity:1; transform:translateY(0); }
+
+  /* ── RESPONSIVE ── */
+  @media(max-width:768px){
+    .nav-links { display:none; flex-direction:column; position:absolute; top:64px; left:0; width:100%; background:var(--deep-maroon); padding:1rem; }
+    .nav-links.open { display:flex; }
+    .hamburger { display:flex; }
+    .gs-card { grid-template-columns:1fr; }
+    .igl-wrap { grid-template-columns:1fr; }
+    .mukhi-grid { grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); }
+  }
+
+  /* Floating particles */
+  .particle {
+    position:fixed; pointer-events:none; z-index:0;
+    width:4px; height:4px; border-radius:50%;
+    background:var(--gold); opacity:0;
+    animation: float linear infinite;
+  }
+  @keyframes float {
+    0%   { opacity:0; transform:translateY(100vh) rotate(0deg); }
+    10%  { opacity:0.4; }
+    90%  { opacity:0.2; }
+    100% { opacity:0; transform:translateY(-10vh) rotate(720deg); }
+  }
+</style>
+</head>
+<body>
+
+<!-- Particles -->
+<script>
+for(let i=0;i<18;i++){
+  const p=document.createElement('div');
+  p.className='particle';
+  p.style.left=Math.random()*100+'vw';
+  p.style.animationDuration=(8+Math.random()*15)+'s';
+  p.style.animationDelay=(Math.random()*15)+'s';
+  p.style.width=p.style.height=(2+Math.random()*4)+'px';
+  p.style.opacity='0';
+  document.body.appendChild(p);
+}
+</script>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="nav-logo">🪷 Shivansh Rudraksha</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#rudraksha">Rudraksha</a></li>
+    <li><a href="#gauri">Gauri Shankar</a></li>
+    <li><a href="#rashi">Rashi Guide</a></li>
+    <li><a href="#igl">IGL Cert</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="hamburger" onclick="document.getElementById('navLinks').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-om">ॐ</div>
+  <h1 class="hero-title">Shivansh Rudraksha Bhandar</h1>
+  <p class="hero-hindi">शिवांश रुद्राक्ष भंडार</p>
+  <p class="hero-tagline">शुद्ध • प्रमाणित • दिव्य</p>
+  <div class="hero-badges">
+    <span class="badge igl">✦ IGL Lab Certified</span>
+    <span class="badge">📍 Kathmandu, Nepal</span>
+    <span class="badge">🇮🇳 All India Supply</span>
+    <span class="badge">🤝 Wholesale Only</span>
+  </div>
+  <p class="hero-owner">Owner: Sajit Kumar &nbsp;|&nbsp; Indraprastha Gemological Laboratories Certified</p>
+  <div class="contact-btns">
+    <a href="https://wa.me/918809754856?text=Hii%20Sajit%20ji%20mujhe%20" class="btn btn-wa" target="_blank">
+      💬 WhatsApp करें
+    </a>
+    <a href="tel:8809754856" class="btn btn-call">📞 Call Now: 8809754856</a>
+  </div>
+</section>
+
+<!-- RUDRAKSHA SECTION 1–21 -->
+<section id="rudraksha" class="section-dark">
+  <div class="section-header reveal">
+    <span class="om">ॐ नमः शिवाय</span>
+    <h2>1 Mukhi से 21 Mukhi Rudraksha</h2>
+    <div class="gold-line"></div>
+    <p class="hindi-sub">प्रत्येक रुद्राक्ष का दिव्य महत्व, देवता, फायदे और उपयोग</p>
+  </div>
+
+  <div class="mukhi-grid">
+
+    <!-- 1 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">🪬</span>
+          <p class="upload-label">1 Mukhi Rudraksha<br>Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number">MUKHI 01</p>
+        <h3 class="card-title">1 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: भगवान शिव | ग्रह: सूर्य</p>
+        <p class="card-wearer">कौन पहने: आध्यात्मिक साधक, नेतृत्वकर्ता, ध्यान में रुचि रखने वाले</p>
+        <ul class="card-benefits">
+          <li>मानसिक शांति और एकाग्रता में वृद्धि</li>
+          <li>आत्मविश्वास और नेतृत्व क्षमता</li>
+          <li>आत्मज्ञान और मोक्ष की प्राप्ति</li>
+          <li>अहंकार से मुक्ति</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">🪬</span>
+          <p class="upload-label">2 Mukhi Rudraksha<br>Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number">MUKHI 02</p>
+        <h3 class="card-title">2 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: अर्धनारीश्वर | ग्रह: चंद्रमा</p>
+        <p class="card-wearer">कौन पहने: विवाहित जोड़े, रिश्तों में समस्या वाले, भावनात्मक अस्थिरता</p>
+        <ul class="card-benefits">
+          <li>पति-पत्नी के बीच प्रेम और सामंजस्य</li>
+          <li>भावनात्मक स्थिरता</li>
+          <li>परिवार में एकता</li>
+          <li>मन की शांति</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">🪬</span>
+          <p class="upload-label">3 Mukhi Rudraksha<br>Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number">MUKHI 03</p>
+        <h3 class="card-title">3 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: अग्नि देव | ग्रह: मंगल</p>
+        <p class="card-wearer">कौन पहने: मेष/वृश्चिक राशि, तनाव व अपराधबोध से पीड़ित</p>
+        <ul class="card-benefits">
+          <li>पुराने तनाव और अपराधबोध से मुक्ति</li>
+          <li>आत्मबल और साहस में वृद्धि</li>
+          <li>पाचन शक्ति में सुधार</li>
+          <li>नकारात्मक ऊर्जा का नाश</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">🪬</span>
+          <p class="upload-label">4 Mukhi Rudraksha<br>Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number">MUKHI 04</p>
+        <h3 class="card-title">4 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: ब्रह्मा | ग्रह: बुध</p>
+        <p class="card-wearer">कौन पहने: विद्यार्थी, लेखक, कलाकार, मिथुन/कन्या राशि</p>
+        <ul class="card-benefits">
+          <li>बुद्धि और वाणी में निखार</li>
+          <li>पढ़ाई और रचनात्मकता में सहायता</li>
+          <li>स्मरण शक्ति बढ़ाना</li>
+          <li>संचार कौशल में वृद्धि</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 5 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">🪬</span>
+          <p class="upload-label">5 Mukhi Rudraksha<br>Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number">MUKHI 05</p>
+        <h3 class="card-title">5 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: कालाग्नि रुद्र | ग्रह: बृहस्पति</p>
+        <p class="card-wearer">कौन पहने: सभी राशि के लोग, सबसे सामान्य और सुरक्षित</p>
+        <ul class="card-benefits">
+          <li>मानसिक शांति और ध्यान में सहायता</li>
+          <li>ब्लड प्रेशर नियंत्रण</li>
+          <li>पाप कर्मों से मुक्ति</li>
+          <li>नियमित जप और साधना के लिए उत्तम</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">🪬</span>
+          <p class="upload-label">6 Mukhi Rudraksha<br>Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number">MUKHI 06</p>
+        <h3 class="card-title">6 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: कार्तिकेय | ग्रह: शुक्र</p>
+        <p class="card-wearer">कौन पहने: वृषभ/तुला राशि, व्यापारी, वक्ता</p>
+        <ul class="card-benefits">
+          <li>आत्मविश्वास और साहस में वृद्धि</li>
+          <li>संचार और वाणी कौशल</li>
+          <li>नेत्र रोगों में लाभकारी</li>
+          <li>करियर में उन्नति</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 7 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">🪬</span>
+          <p class="upload-label">7 Mukhi Rudraksha<br>Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number">MUKHI 07</p>
+        <h3 class="card-title">7 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: महालक्ष्मी | ग्रह: शनि</p>
+        <p class="card-wearer">कौन पहने: कुंभ राशि, व्यापारी, धन की इच्छा रखने वाले</p>
+        <ul class="card-benefits">
+          <li>आर्थिक स्थिरता और धन प्राप्ति</li>
+          <li>व्यापार और करियर में प्रगति</li>
+          <li>शनि के बुरे प्रभाव से रक्षा</li>
+          <li>स्वास्थ्य लाभ</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 8 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">🪬</span>
+          <p class="upload-label">8 Mukhi Rudraksha<br>Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number">MUKHI 08</p>
+        <h3 class="card-title">8 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: गणेश | ग्रह: राहु</p>
+        <p class="card-wearer">कौन पहने: जीवन में बाधाओं से परेशान, नई शुरुआत करने वाले</p>
+        <ul class="card-benefits">
+          <li>जीवन की सभी बाधाएं दूर करना</li>
+          <li>सफलता और बुद्धिमत्ता</li>
+          <li>राहु के दोषों से मुक्ति</li>
+          <li>नई शुरुआत में शुभता</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 9 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">🪬</span>
+          <p class="upload-label">9 Mukhi Rudraksha<br>Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number">MUKHI 09</p>
+        <h3 class="card-title">9 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: दुर्गा माँ | ग्रह: केतु</p>
+        <p class="card-wearer">कौन पहने: महिलाएं, केतु दोष वाले, शक्ति की साधना करने वाले</p>
+        <ul class="card-benefits">
+          <li>निडरता और अदम्य शक्ति</li>
+          <li>नकारात्मकता और बुरी नजर से सुरक्षा</li>
+          <li>ऊर्जा और उत्साह में वृद्धि</li>
+          <li>केतु के दुष्प्रभाव से रक्षा</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 10 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">🪬</span>
+          <p class="upload-label">10 Mukhi Rudraksha<br>Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number">MUKHI 10</p>
+        <h3 class="card-title">10 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: विष्णु भगवान | दशों दिशाओं के रक्षक</p>
+        <p class="card-wearer">कौन पहने: भय और चिंता से ग्रस्त, सुरक्षा चाहने वाले</p>
+        <ul class="card-benefits">
+          <li>दशों दिशाओं से सुरक्षा</li>
+          <li>मानसिक स्थिरता और शांति</li>
+          <li>डर और चिंता से मुक्ति</li>
+          <li>नौ ग्रहों के दोषों से रक्षा</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 11 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">🪬</span>
+          <p class="upload-label">11 Mukhi Rudraksha<br>Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number">MUKHI 11</p>
+        <h3 class="card-title">11 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: हनुमान जी | ग्रह: मीन राशि</p>
+        <p class="card-wearer">कौन पहने: मीन राशि, साहस और स्मरण शक्ति बढ़ाने के इच्छुक</p>
+        <ul class="card-benefits">
+          <li>अटूट साहस और धैर्य</li>
+          <li>स्मरण शक्ति और आध्यात्मिक बल</li>
+          <li>जीवन में सही निर्णय लेने की क्षमता</li>
+          <li>ध्यान में गहराई</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 12 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">🪬</span>
+          <p class="upload-label">12 Mukhi Rudraksha<br>Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number">MUKHI 12</p>
+        <h3 class="card-title">12 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: सूर्य देव | ग्रह: सूर्य</p>
+        <p class="card-wearer">कौन पहने: सिंह राशि, नेता, प्रशासनिक अधिकारी</p>
+        <ul class="card-benefits">
+          <li>तेज, ओज और नेतृत्व क्षमता</li>
+          <li>आत्मविश्वास और ऊर्जा में वृद्धि</li>
+          <li>हृदय रोगों में सहायक</li>
+          <li>सम्मान और प्रतिष्ठा की प्राप्ति</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 13 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">🪬</span>
+          <p class="upload-label">13 Mukhi Rudraksha<br>Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number">MUKHI 13</p>
+        <h3 class="card-title">13 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: कामदेव | ग्रह: शुक्र</p>
+        <p class="card-wearer">कौन पहने: आकर्षण और सामाजिक प्रभाव बढ़ाने के इच्छुक</p>
+        <ul class="card-benefits">
+          <li>व्यक्तित्व में आकर्षण</li>
+          <li>सामाजिक प्रभाव और लोकप्रियता</li>
+          <li>इच्छापूर्ति और सांसारिक सुख</li>
+          <li>आत्मसम्मान में वृद्धि</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 14 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">🪬</span>
+          <p class="upload-label">14 Mukhi Rudraksha<br>Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number">MUKHI 14</p>
+        <h3 class="card-title">14 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: हनुमान / शिव स्वरूप | ग्रह: शनि</p>
+        <p class="card-wearer">कौन पहने: मकर राशि, तीव्र निर्णय क्षमता चाहने वाले</p>
+        <ul class="card-benefits">
+          <li>तीव्र निर्णय क्षमता और विवेक</li>
+          <li>आध्यात्मिक जागरूकता</li>
+          <li>सुरक्षा और संरक्षण</li>
+          <li>तीसरी आँख का जागरण</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 15 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">🪬</span>
+          <p class="upload-label">15 Mukhi Rudraksha<br>Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number">MUKHI 15</p>
+        <h3 class="card-title">15 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: पशुपतिनाथ | ग्रह: बुध-शुक्र</p>
+        <p class="card-wearer">कौन पहने: भावनात्मक रूप से अस्थिर, प्रेम में परेशानी वाले</p>
+        <ul class="card-benefits">
+          <li>भावनात्मक नियंत्रण और संतुलन</li>
+          <li>प्रेम और आंतरिक शांति</li>
+          <li>फेफड़ों के रोगों में लाभकारी</li>
+          <li>रिश्तों में सुधार</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 16 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">🪬</span>
+          <p class="upload-label">16 Mukhi Rudraksha<br>Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number">MUKHI 16</p>
+        <h3 class="card-title">16 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: महामृत्युंजय शिव | विजय रुद्राक्ष</p>
+        <p class="card-wearer">कौन पहने: गंभीर बीमारी, मृत्युभय, बुरी नजर से पीड़ित</p>
+        <ul class="card-benefits">
+          <li>मृत्युभय और गंभीर रोगों से सुरक्षा</li>
+          <li>शक्तिशाली सुरक्षा कवच</li>
+          <li>भय और नकारात्मक ऊर्जा से रक्षा</li>
+          <li>दीर्घायु और स्वास्थ्य</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 17 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">🪬</span>
+          <p class="upload-label">17 Mukhi Rudraksha<br>Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number">MUKHI 17</p>
+        <h3 class="card-title">17 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: विश्वकर्मा | कामना पूर्ति रुद्राक्ष</p>
+        <p class="card-wearer">कौन पहने: व्यापारी, रियल एस्टेट, अचानक धन लाभ के इच्छुक</p>
+        <ul class="card-benefits">
+          <li>अचानक धन और संपत्ति लाभ</li>
+          <li>भूमि और संपत्ति में सफलता</li>
+          <li>व्यापार में उन्नति</li>
+          <li>जीवन की बड़ी इच्छाएं पूर्ण करना</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 18 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">🪬</span>
+          <p class="upload-label">18 Mukhi Rudraksha<br>Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number">MUKHI 18</p>
+        <h3 class="card-title">18 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: भूमि देवी | पृथ्वी तत्व रुद्राक्ष</p>
+        <p class="card-wearer">कौन पहने: किसान, भूमि व्यवसायी, गर्भवती महिलाएं</p>
+        <ul class="card-benefits">
+          <li>स्थिरता, धैर्य और दृढ़ता</li>
+          <li>भूमि-संपत्ति में सफलता</li>
+          <li>गर्भवती महिलाओं के लिए रक्षाकारक</li>
+          <li>पृथ्वी तत्व का संतुलन</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 19 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">🪬</span>
+          <p class="upload-label">19 Mukhi Rudraksha<br>Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number">MUKHI 19</p>
+        <h3 class="card-title">19 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: नारायण (विष्णु) | अत्यंत दुर्लभ</p>
+        <p class="card-wearer">कौन पहने: उच्च पदस्थ अधिकारी, राजनेता, सम्मान के इच्छुक</p>
+        <ul class="card-benefits">
+          <li>सम्मान और उच्च प्रतिष्ठा</li>
+          <li>सफलता और समृद्धि</li>
+          <li>सभी सुखों की प्राप्ति</li>
+          <li>आत्मिक उन्नति</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 20 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">🪬</span>
+          <p class="upload-label">20 Mukhi Rudraksha<br>Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number">MUKHI 20</p>
+        <h3 class="card-title">20 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: ब्रह्मा-विष्णु-महेश | त्रिदेव स्वरूप</p>
+        <p class="card-wearer">कौन पहने: गहरे ध्यान साधक, आत्मज्ञान के इच्छुक</p>
+        <ul class="card-benefits">
+          <li>आध्यात्मिक ज्ञान और अंतर्ज्ञान</li>
+          <li>ध्यान में अत्यंत गहराई</li>
+          <li>तीनों लोकों की शक्ति</li>
+          <li>परम आनंद और मोक्ष मार्ग</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 21 Mukhi -->
+    <div class="mukhi-card reveal">
+      <div class="card-img-wrap" style="background:linear-gradient(160deg,rgba(201,168,76,0.15),rgba(58,0,8,0.9));">
+        <div class="card-img-placeholder">
+          <span class="ru-icon">👑</span>
+          <p class="upload-label">21 Mukhi Rudraksha<br>RAREST — Image Upload Here</p>
+        </div>
+        <input type="file" accept="image/*" onchange="previewImg(this)">
+      </div>
+      <div class="card-body">
+        <p class="card-number" style="color:var(--light-gold);">MUKHI 21 ★ RARE</p>
+        <h3 class="card-title" style="color:#FFD700;">21 Mukhi Rudraksha</h3>
+        <p class="card-deity">देवता: कुबेर | धन के स्वामी | अत्यंत दुर्लभ</p>
+        <p class="card-wearer">कौन पहने: उद्योगपति, बड़े व्यापारी, उच्च पदस्थ व्यक्ति</p>
+        <ul class="card-benefits">
+          <li>अपार धन, ऐश्वर्य और वैभव</li>
+          <li>उच्च पद और असीमित सफलता</li>
+          <li>कुबेर का आशीर्वाद</li>
+          <li>सभी मुखी का संयुक्त प्रभाव</li>
+          <li>IGL X-Ray Report सहित प्रमाणित</li>
+        </ul>
+      </div>
+    </div>
+
+  </div><!-- end mukhi-grid -->
+</section>
+
+<!-- GAURI SHANKAR SECTION -->
+<section id="gauri" class="section-light">
+  <div class="section-header reveal">
+    <span class="om" style="color:var(--maroon);">❈ ❈ ❈</span>
+    <h2>गौरी शंकर नेपाली रुद्राक्ष</h2>
+    <div class="gold-line"></div>
+    <p class="hindi-sub">शिव और पार्वती के दिव्य मिलन का प्रतीक — अत्यंत पवित्र</p>
+  </div>
+
+  <div class="gs-section reveal">
+    <div class="gs-card">
+      <div class="gs-img-col">
+        <div class="gs-img-placeholder">
+          <span class="ru-big">🪬🪬</span>
+          <p class="upload-label">Gauri Shankar Rudraksha<br>Image Upload Here<br>(Click to Upload)</p>
+        </div>
+        <div class="gs-badge">✦ Most Sacred</div>
+        <input type="file" accept="image/*" onchange="previewGS(this)">
+      </div>
+      <div class="gs-info">
+        <h3>Gauri Shankar Rudraksha</h3>
+        <p class="gs-hindi">
+          दो प्राकृतिक रूप से जुड़े हुए रुद्राक्ष — शिव और पार्वती का दिव्य मिलन<br>
+          देवता: शिव-पार्वती | ग्रह: चंद्रमा-शुक्र
+        </p>
+        <p class="gs-desc">
+          "यह रुद्राक्ष दो दिलों को एक करता है — जैसे शिव और पार्वती अविभाज्य हैं, वैसे ही यह आपके जीवन में प्रेम और एकता लाता है।"
+        </p>
+        <p style="font-family:'Cinzel',serif;font-size:0.8rem;color:var(--saffron);margin-bottom:0.8rem;letter-spacing:1px;">कौन पहने:</p>
+        <ul class="gs-benefits" style="margin-bottom:1rem;">
+          <li>पति-पत्नी के बीच संबंध मजबूत करने के लिए</li>
+          <li>विवाह में आ रही बाधाओं के समाधान हेतु</li>
+          <li>जोड़े मिलकर धारण कर सकते हैं</li>
+        </ul>
+        <p style="font-family:'Cinzel',serif;font-size:0.8rem;color:var(--saffron);margin-bottom:0.8rem;letter-spacing:1px;">दिव्य फायदे:</p>
+        <ul class="gs-benefits">
+          <li>रिश्तों में अटूट प्रेम और समझ</li>
+          <li>मानसिक शांति और सुख</li>
+          <li>परिवार में सामंजस्य और एकता</li>
+          <li>हृदय चक्र का संतुलन</li>
+          <li>आध्यात्मिक उन्नति</li>
+          <li>संतान प्राप्ति में सहायक</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RASHI GUIDE SECTION -->
+<section id="rashi" class="section-saffron">
+  <div class="section-header reveal">
+    <span class="om">🔯</span>
+    <h2>रशि अनुसार रुद्राक्ष गाइड</h2>
+    <div class="gold-line"></div>
+    <p class="hindi-sub">पंचांग शैली — अपनी राशि के अनुसार श्रेष्ठ रुद्राक्ष जानें</p>
+  </div>
+
+  <div class="rashi-grid">
+
+    <div class="rashi-card reveal">
+      <div class="rashi-header">
+        <span class="rashi-symbol">♈</span>
+        <div><div class="rashi-name">मेष राशि</div><div class="rashi-eng">ARIES</div></div>
+      </div>
+      <div class="rashi-mukhi">3 मुखी रुद्राक्ष</div>
+      <div class="rashi-planet">स्वामी ग्रह: मंगल</div>
+      <p class="rashi-fayde">तनाव और अपराधबोध से मुक्ति, साहस में वृद्धि, ऊर्जा और उत्साह, मंगल दोष शांति</p>
+    </div>
+
+    <div class="rashi-card reveal">
+      <div class="rashi-header">
+        <span class="rashi-symbol">♉</span>
+        <div><div class="rashi-name">वृषभ राशि</div><div class="rashi-eng">TAURUS</div></div>
+      </div>
+      <div class="rashi-mukhi">6 मुखी रुद्राक्ष</div>
+      <div class="rashi-planet">स्वामी ग्रह: शुक्र</div>
+      <p class="rashi-fayde">प्रेम और सौंदर्य बोध, आर्थिक स्थिरता, कला में उत्कृष्टता, संचार कौशल</p>
+    </div>
+
+    <div class="rashi-card reveal">
+      <div class="rashi-header">
+        <span class="rashi-symbol">♊</span>
+        <div><div class="rashi-name">मिथुन राशि</div><div class="rashi-eng">GEMINI</div></div>
+      </div>
+      <div class="rashi-mukhi">4 मुखी रुद्राक्ष</div>
+      <div class="rashi-planet">स्वामी ग्रह: बुध</div>
+      <p class="rashi-fayde">बुद्धि और वाणी में निखार, पढ़ाई में सफलता, रचनात्मकता, संचार में श्रेष्ठता</p>
+    </div>
+
+    <div class="rashi-card reveal">
+      <div class="rashi-header">
+        <span class="rashi-symbol">♋</span>
+        <div><div class="rashi-name">कर्क राशि</div><div class="rashi-eng">CANCER</div></div>
+      </div>
+      <div class="rashi-mukhi">2 मुखी रुद्राक्ष</div>
+      <div class="rashi-planet">स्वामी ग्रह: चंद्रमा</div>
+      <p class="rashi-fayde">भावनात्मक स्थिरता, मन की शांति, परिवार में सुख, मातृ सुख की प्राप्ति</p>
+    </div>
+
+    <div class="rashi-card reveal">
+      <div class="rashi-header">
+        <span class="rashi-symbol">♌</span>
+        <div><div class="rashi-name">सिंह राशि</div><div class="rashi-eng">LEO</div></div>
+      </div>
+      <div class="rashi-mukhi">12 मुखी रुद्राक्ष</div>
+      <div class="rashi-planet">स्वामी ग्रह: सूर्य</div>
+      <p class="rashi-fayde">नेतृत्व और आत्मविश्वास, तेज और ओज, सम्मान की प्राप्ति, हृदय स्वास्थ्य</p>
+    </div>
+
+    <div class="rashi-card reveal">
+      <div class="rashi-header">
+        <span class="rashi-symbol">♍</span>
+        <div><div class="rashi-name">कन्या राशि</div><div class="rashi-eng">VIRGO</div></div>
+      </div>
+      <div class="rashi-mukhi">4 मुखी रुद्राक्ष</div>
+      <div class="rashi-planet">स्वामी ग्रह: बुध</div>
+      <p class="rashi-fayde">विश्लेषण और विवेक, स्वास्थ्य में सुधार, व्यवस्था और अनुशासन, पेशेवर उत्कृष्टता</p>
+    </div>
+
+    <div class="rashi-card reveal">
+      <div class="rashi-header">
+        <span class="rashi-symbol">♎</span>
+        <div><div class="rashi-name">तुला राशि</div><div class="rashi-eng">LIBRA</div></div>
+      </div>
+      <div class="rashi-mukhi">6 मुखी रुद्राक्ष</div>
+      <div class="rashi-planet">स्वामी ग्रह: शुक्र</div>
+      <p class="rashi-fayde">न्याय और संतुलन, रिश्तों में सुधार, सौंदर्य बोध, व्यापार में सफलता</p>
+    </div>
+
+    <div class="rashi-card reveal">
+      <div class="rashi-header">
+        <span class="rashi-symbol">♏</span>
+        <div><div class="rashi-name">वृश्चिक राशि</div><div class="rashi-eng">SCORPIO</div></div>
+      </div>
+      <div class="rashi-mukhi">18 मुखी रुद्राक्ष</div>
+      <div class="rashi-planet">स्वामी ग्रह: मंगल</div>
+      <p class="rashi-fayde">अंतर्ज्ञान शक्ति, संपत्ति लाभ, रहस्यमयी ऊर्जाओं से रक्षा, स्थिरता</p>
+    </div>
+
+    <div class="rashi-card reveal">
+      <div class="rashi-header">
+        <span class="rashi-symbol">♐</span>
+        <div><div class="rashi-name">धनु राशि</div><div class="rashi-eng">SAGITTARIUS</div></div>
+      </div>
+      <div class="rashi-mukhi">5 मुखी रुद्राक्ष</div>
+      <div class="rashi-planet">स्वामी ग्रह: बृहस्पति</div>
+      <p class="rashi-fayde">ज्ञान और विद्या, आध्यात्मिक उन्नति, यात्रा में शुभता, धर्म में रुचि</p>
+    </div>
+
+    <div class="rashi-card reveal">
+      <div class="rashi-header">
+        <span class="rashi-symbol">♑</span>
+        <div><div class="rashi-name">मकर राशि</div><div class="rashi-eng">CAPRICORN</div></div>
+      </div>
+      <div class="rashi-mukhi">14 मुखी रुद्राक्ष</div>
+      <div class="rashi-planet">स्वामी ग्रह: शनि</div>
+      <p class="rashi-fayde">करियर में उन्नति, दृढ़ता और अनुशासन, शनि दोष शांति, निर्णय क्षमता</p>
+    </div>
+
+    <div class="rashi-card reveal">
+      <div class="rashi-header">
+        <span class="rashi-symbol">♒</span>
+        <div><div class="rashi-name">कुंभ राशि</div><div class="rashi-eng">AQUARIUS</div></div>
+      </div>
+      <div class="rashi-mukhi">7 मुखी रुद्राक्ष</div>
+      <div class="rashi-planet">स्वामी ग्रह: शनि</div>
+      <p class="rashi-fayde">आर्थिक स्थिरता, नवाचार में सफलता, शनि की कृपा, सामाजिक सम्मान</p>
+    </div>
+
+    <div class="rashi-card reveal">
+      <div class="rashi-header">
+        <span class="rashi-symbol">♓</span>
+        <div><div class="rashi-name">मीन राशि</div><div class="rashi-eng">PISCES</div></div>
+      </div>
+      <div class="rashi-mukhi">11 मुखी रुद्राक्ष</div>
+      <div class="rashi-planet">स्वामी ग्रह: बृहस्पति</div>
+      <p class="rashi-fayde">आध्यात्मिक जागृति, अंतर्मन की शांति, रचनात्मकता, मोक्ष की ओर प्रगति</p>
+    </div>
+
+  </div><!-- end rashi-grid -->
+</section>
+
+<!-- IGL CERTIFICATION SECTION -->
+<section id="igl" class="section-dark">
+  <div class="section-header reveal">
+    <span class="om">🏛️</span>
+    <h2>IGL — Indraprastha Gemological Laboratories</h2>
+    <div class="gold-line"></div>
+    <p class="hindi-sub">नेपाली, इंडोनेशियन और भारतीय रुद्राक्ष परीक्षण मूल्य सूची (2024)</p>
+  </div>
+
+  <div class="igl-wrap reveal">
+
+    <!-- Nepali Prices -->
+    <div class="igl-card">
+      <h3>🪬 नेपाली रुद्राक्ष — Testing Price</h3>
+      <div class="price-row"><span class="face">1 Mukhi Underdeveloped</span><span class="price">₹500 / ₹800</span></div>
+      <div class="price-row"><span class="face">SAWAAR</span><span class="price">₹500 / ₹700</span></div>
+      <div class="price-row"><span class="face">2 Mukhi</span><span class="price">₹300 / ₹500</span></div>
+      <div class="price-row"><span class="face">3 to 7 Mukhi</span><span class="price">₹200 / ₹400</span></div>
+      <div class="price-row"><span class="face">8 to 12 Mukhi</span><span class="price">₹300 / ₹500</span></div>
+      <div class="price-row"><span class="face">13 Mukhi</span><span class="price">₹400 / ₹600</span></div>
+      <div class="price-row"><span class="face">14 & 15 Mukhi</span><span class="price">₹600 / ₹800</span></div>
+      <div class="price-row"><span class="face">16 & 17 Mukhi</span><span class="price">₹800 / ₹1000</span></div>
+      <div class="price-row"><span class="face">18 to 20 Mukhi</span><span class="price">₹2000 / ₹2500</span></div>
+      <div class="price-row"><span class="face">21 Mukhi (X-Ray incl.)</span><span class="price">₹10,000 / ₹11,000</span></div>
+      <div class="price-row"><span class="face">Gauri Shankar / Garbh Gauri</span><span class="price">₹5,500 / ₹6,000</span></div>
+      <div class="price-row"><span class="face">TRIJUTI (Any Face)</span><span class="price">₹5,500 / ₹6,000</span></div>
+      <div class="price-row"><span class="face">String: 1–14 Mukhi</span><span class="price">₹3,200</span></div>
+      <div class="price-row"><span class="face">String: 1–21 Mukhi</span><span class="price">₹21,000</span></div>
+      <div class="igl-note">
+        ★ Smart Card / Folder prices<br>
+        ★ Normal X-Ray: +₹200 additional<br>
+        ★ Inverse X-Ray: 1–7 Face ₹400 | 8–13 Face ₹500 | 14–17 Face ₹700 | 18–20 Face ₹1000 | 21+ Face ₹3000
+      </div>
+    </div>
+
+    <!-- Indonesian + Indian Prices -->
+    <div>
+      <div class="igl-card" style="margin-bottom:1.5rem;">
+        <h3>🌴 Indonesian Rudraksha — Testing Price</h3>
+        <div class="price-row"><span class="face">1 Mukhi</span><span class="price">₹300 / ₹500</span></div>
+        <div class="price-row"><span class="face">SAWAAR</span><span class="price">₹300 / ₹500</span></div>
+        <div class="price-row"><span class="face">2 to 7 Mukhi</span><span class="price">₹200 / ₹400</span></div>
+        <div class="price-row"><span class="face">8 to 13 Mukhi</span><span class="price">₹300 / ₹500</span></div>
+        <div class="price-row"><span class="face">14 to 17 Mukhi</span><span class="price">₹400 / ₹600</span></div>
+        <div class="price-row"><span class="face">18 to 20 Mukhi</span><span class="price">₹1000 / ₹1200</span></div>
+        <div class="price-row"><span class="face">21 Mukhi</span><span class="price">₹2,000 / ₹2,500</span></div>
+        <div class="price-row"><span class="face">Gauri Shankar / GG</span><span class="price">₹1,500 / ₹2,000</span></div>
+        <div class="price-row"><span class="face">TRIJUTI</span><span class="price">₹1,500 / ₹2,000</span></div>
+        <div class="price-row"><span class="face">String: 1–14 Mukhi</span><span class="price">₹1,600</span></div>
+        <div class="price-row"><span class="face">String: 1–21 Mukhi</span><span class="price">₹5,000</span></div>
+        <div class="igl-note">★ Normal X-Ray: +₹200 additional</div>
+      </div>
+      <div class="igl-card">
+        <h3>🇮🇳 Indian Rudraksha — Testing Price</h3>
+        <div class="price-row"><span class="face">South India (Any Face)</span><span class="price">₹200 / ₹400</span></div>
+        <div class="price-row"><span class="face">North India (1 Face)</span><span class="price">₹500 / ₹700</span></div>
+        <div class="price-row"><span class="face">Indian (Others)</span><span class="price">₹200 / ₹400</span></div>
+        <div class="igl-note">★ Normal X-Ray: +₹200 additional<br>★ IGL reserves the right to change prices at any time</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WEARING GUIDE -->
+<section class="section-light" style="padding:4rem 2rem;">
+  <div class="section-header reveal">
+    <span class="om" style="color:var(--maroon);">🕉️</span>
+    <h2>रुद्राक्ष धारण करने का विधि</h2>
+    <div class="gold-line"></div>
+  </div>
+  <div style="max-width:700px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;" class="reveal">
+    <div style="background:linear-gradient(135deg,rgba(92,10,20,0.06),rgba(201,168,76,0.06));border:1px solid rgba(201,168,76,0.2);border-radius:10px;padding:1.5rem;">
+      <h4 style="font-family:'Cinzel',serif;color:var(--maroon);margin-bottom:1rem;font-size:0.95rem;">शुभ दिन</h4>
+      <p style="font-family:'Noto Serif Devanagari',serif;font-size:0.85rem;line-height:1.9;color:var(--brown);">
+        सोमवार या महाशिवरात्रि को धारण करना अत्यंत शुभ माना जाता है। प्रातः काल स्नान के बाद शुद्ध मन से धारण करें।
+      </p>
+    </div>
+    <div style="background:linear-gradient(135deg,rgba(92,10,20,0.06),rgba(201,168,76,0.06));border:1px solid rgba(201,168,76,0.2);border-radius:10px;padding:1.5rem;">
+      <h4 style="font-family:'Cinzel',serif;color:var(--maroon);margin-bottom:1rem;font-size:0.95rem;">मंत्र और पूजा</h4>
+      <p style="font-family:'Noto Serif Devanagari',serif;font-size:0.85rem;line-height:1.9;color:var(--brown);">
+        "ॐ नमः शिवाय" मंत्र से अभिषेक और पूजा करके धारण करें। 108 बार मंत्र जाप शुभ है।
+      </p>
+    </div>
+    <div style="background:linear-gradient(135deg,rgba(92,10,20,0.06),rgba(201,168,76,0.06));border:1px solid rgba(201,168,76,0.2);border-radius:10px;padding:1.5rem;">
+      <h4 style="font-family:'Cinzel',serif;color:var(--maroon);margin-bottom:1rem;font-size:0.95rem;">धागा / धातु</h4>
+      <p style="font-family:'Noto Serif Devanagari',serif;font-size:0.85rem;line-height:1.9;color:var(--brown);">
+        लाल या काले धागे में अथवा चांदी या सोने में पहन सकते हैं। दोनों विधियाँ शास्त्र सम्मत हैं।
+      </p>
+    </div>
+    <div style="background:linear-gradient(135deg,rgba(92,10,20,0.06),rgba(201,168,76,0.06));border:1px solid rgba(201,168,76,0.2);border-radius:10px;padding:1.5rem;">
+      <h4 style="font-family:'Cinzel',serif;color:var(--maroon);margin-bottom:1rem;font-size:0.95rem;">ध्यान रखें</h4>
+      <p style="font-family:'Noto Serif Devanagari',serif;font-size:0.85rem;line-height:1.9;color:var(--brown);">
+        रुद्राक्ष के लाभ मुख्यतः धार्मिक और पारंपरिक मान्यताओं पर आधारित हैं। शुद्ध और IGL प्रमाणित रुद्राक्ष ही धारण करें।
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section id="contact" class="section-dark">
+  <div class="section-header reveal">
+    <span class="om">📿</span>
+    <h2>संपर्क करें</h2>
+    <div class="gold-line"></div>
+    <p class="hindi-sub">Wholesale Inquiry | Bulk Orders | Certification Queries</p>
+  </div>
+
+  <div class="contact-section reveal">
+    <div class="contact-info">
+      <strong>Owner:</strong> Sajit Kumar<br>
+      <strong>Location:</strong> Kathmandu, Nepal<br>
+      <strong>Supply:</strong> All Over India (Wholesale Only)<br>
+      <strong>Phone:</strong> <a href="tel:8809754856" style="color:var(--light-gold);text-decoration:none;">8809754856</a><br>
+      <strong>Certified By:</strong> IGL — Indraprastha Gemological Laboratories
+    </div>
+
+    <div class="social-links">
+      <a href="https://wa.me/918809754856?text=Hii%20Sajit%20ji%20mujhe%20" class="social-btn wa" target="_blank">
+        💬 WhatsApp
+      </a>
+      <a href="https://facebook.com/shivanshrudrakash" class="social-btn fb" target="_blank">
+        📘 Facebook
+      </a>
+      <a href="https://instagram.com/shivanshrudrakash" class="social-btn ig" target="_blank">
+        📸 Instagram
+      </a>
+    </div>
+
+    <a href="https://wa.me/918809754856?text=Hii%20Sajit%20ji%20mujhe%20" class="btn btn-wa" target="_blank" style="margin:0 auto;display:inline-flex;font-size:1rem;padding:1rem 2.5rem;">
+      💬 अभी WhatsApp पर संपर्क करें
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">ॐ Shivansh Rudraksha Bhandar</div>
+  <div class="footer-sub">शिवांश रुद्राक्ष भंडार — Kathmandu, Nepal</div>
+  <div class="footer-links">
+    <a href="#home">Home</a>
+    <a href="#rudraksha">Rudraksha</a>
+    <a href="#gauri">Gauri Shankar</a>
+    <a href="#rashi">Rashi Guide</a>
+    <a href="#igl">IGL Certificate</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <p class="footer-copy">IGL Certified | Wholesale Only | All India Supply<br>
+  © 2024 Shivansh Rudraksha Bhandar. Owner: Sajit Kumar</p>
+</footer>
+
+<script>
+// Image preview on card upload
+function previewImg(input) {
+  const wrap = input.closest('.card-img-wrap');
+  const placeholder = wrap.querySelector('.card-img-placeholder');
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    placeholder.style.display = 'none';
+    let img = wrap.querySelector('img');
+    if (!img) { img = document.createElement('img'); wrap.insertBefore(img, input); }
+    img.src = e.target.result;
+    img.style.display = 'block';
+  };
+  reader.readAsDataURL(file);
+}
+
+// Gauri Shankar image preview
+function previewGS(input) {
+  const col = input.closest('.gs-img-col');
+  const placeholder = col.querySelector('.gs-img-placeholder');
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    placeholder.style.display = 'none';
+    let img = col.querySelector('img');
+    if (!img) { img = document.createElement('img'); col.insertBefore(img, input); }
+    img.src = e.target.result;
+    img.style.cssText = 'width:100%;height:100%;object-fit:cover;';
+  };
+  reader.readAsDataURL(file);
+}
+
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
